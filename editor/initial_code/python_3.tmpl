@@ -2,22 +2,22 @@
 {% block env %}{% endblock env %}
 
 {% block start %}
-def sum_two(a: int, b: int) -> int:
+def aggregate_and_count(items:list) -> dict:
     # your code here
-    return None
+    return {}
 {% endblock start %}
 
 {% block example %}
 print('Example')
-print(mult_two(1, 2))
+print(aggregate_and_count([['a', 1], ['b', 2], ['c', 3], ['a', 5]]))
 {% endblock %}
 
 {% block tests %}
 {% for t in tests %}
-assert {% block call %}mult_two({{t.input.0}}, {{t.input.1}})
+assert {% block call %}aggregate_and_count({{t.input}})
 {% endblock %} == {% block result %}{{t.answer}}{% endblock %}{% endfor %}
 {% endblock %}
 
 {% block final %}
-print("The first mission is done! Click 'Check' to earn cool rewards!")
+print("The aggregation is done! Click 'Check' to earn cool rewards!")
 {% endblock final %}

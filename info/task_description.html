@@ -1,16 +1,18 @@
 <!-- Describe task in general -->
 
 <p>
-    Sum two passed ints
+    You have a list of values where each element is a list of two values. First is a name and the second one is counter.
 </p>
 
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+<p>
+    What you need to do is to aggregate those values into a dict, which is easy, you can simply use function disc for that. But, name is not unique, so if you find more that one elements with the same name, you should sum their counters in the aggregated dict. 
 </p>
+
+
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are ints.
+    <strong>Input: </strong> List of list of two elelemnts - str and int.
 </p>
 
 <p>
@@ -25,18 +27,3 @@
     </p>
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
-
-<!-- Here you can explain how it can be used in development -->
-<!-- The section is optional -->
-<p class="for_info_only">
-
-    <strong>How it’s used: </strong>
-    <i>(math is used everywhere)</i>
-</p>
-
-<!-- Here you can explain some constraints for input-->
-<!-- The section is optional -->
-<p>
-    <strong>Precondition:</strong>
-    <i>both given ints should be between -1000 and 1000</i>
-</p>

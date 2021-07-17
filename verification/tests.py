@@ -11,26 +11,30 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": [['a', 1], ['b', 2]],
+            "answer": {'a': 1, 'b': 2}
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
-        }
+            "input": [['a', 1], ['a', 2]],
+            "answer": {'a': 3,}
+        },
+        {
+            "input": [['a', 1], ['b', 2], ['c', 3], ['a', 5]],
+            "answer": {'a': 6, 'b': 2, 'c': 3}
+        },
+        {
+            "input": [['a', 1]],
+            "answer": {'a': 1}
+        },
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "input": [["bob", 1], ["mark", 2], ["jack", 3], ["jack", 7]],
+            "answer": {'bob': 1, 'mark': 2, 'jack': 10}
         },
         {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
-        }
+            "input": [["bob", 1], ["mark", 1], ["bob", 1], ["mark", 1], ["bob", 1], ["mark", 1]],
+            "answer": {'bob': 3, 'mark': 3}
+        },
     ]
 }
